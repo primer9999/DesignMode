@@ -13,9 +13,10 @@ class Lazy {
 Lazy* Lazy::lazy = new Lazy();
 
 int main() {
-  Lazy* lazy = Lazy::getObject();
-  if (lazy) 
+  Lazy* lazy1 = Lazy::getObject();
+  Lazy* lazy2 = Lazy::getObject();
+  if (lazy1 == lazy2) 
     std::cout << "ok!" << std::endl;
-  delete lazy;
+  delete lazy1;
   return 0;
 }
